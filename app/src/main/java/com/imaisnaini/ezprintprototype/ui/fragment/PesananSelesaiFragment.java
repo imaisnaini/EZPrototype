@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 
 import com.imaisnaini.ezprintprototype.R;
 import com.imaisnaini.ezprintprototype.ui.adapter.MitraAdapter;
+import com.imaisnaini.ezprintprototype.ui.adapter.PesananAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +24,7 @@ import butterknife.ButterKnife;
  * A simple {@link Fragment} subclass.
  */
 public class PesananSelesaiFragment extends Fragment {
-    private MitraAdapter mAdapter;
+    private PesananAdapter mAdapter;
     private List<String> mList = new ArrayList<>();
 
     @BindView(R.id.fragment_pesanan_selesai_recyclerView)
@@ -48,15 +49,15 @@ public class PesananSelesaiFragment extends Fragment {
     }
 
     public void init(){
-        mAdapter = new MitraAdapter(getActivity());
+        mAdapter = new PesananAdapter(getActivity());
         mAdapter.generate(mList);
         mRvContent.setLayoutManager(new LinearLayoutManager(getActivity()));
         mRvContent.setAdapter(mAdapter);
     }
 
     public void initData(){
-        String[] kategori = getResources().getStringArray(R.array.list_kategori);
-        for (String s : kategori){
+        String[] pesanan = getResources().getStringArray(R.array.list_mitra);
+        for (String s : pesanan){
             mList.add(s);
         }
     }

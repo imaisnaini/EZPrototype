@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.imaisnaini.ezprintprototype.R;
-import com.imaisnaini.ezprintprototype.ui.adapter.MitraAdapter;
+import com.imaisnaini.ezprintprototype.ui.adapter.PesananAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +22,7 @@ import butterknife.ButterKnife;
  * A simple {@link Fragment} subclass.
  */
 public class PesananFragment extends Fragment {
-    private MitraAdapter mAdapter;
+    private PesananAdapter mAdapter;
     private List<String> mList = new ArrayList<>();
 
     @BindView(R.id.fragment_pesanan_recyclerView)
@@ -46,16 +46,16 @@ public class PesananFragment extends Fragment {
         return view;
     }
 
-    public void init(){
-        mAdapter = new MitraAdapter(getActivity());
+    public void init() {
+        mAdapter = new PesananAdapter(getActivity());
         mAdapter.generate(mList);
         mRvContent.setLayoutManager(new LinearLayoutManager(getActivity()));
         mRvContent.setAdapter(mAdapter);
     }
 
-    public void initData(){
-        String[] kategori = getResources().getStringArray(R.array.list_kategori);
-        for (String s : kategori){
+    public void initData() {
+        String[] pesanan = getResources().getStringArray(R.array.list_mitra);
+        for (String s : pesanan) {
             mList.add(s);
         }
     }

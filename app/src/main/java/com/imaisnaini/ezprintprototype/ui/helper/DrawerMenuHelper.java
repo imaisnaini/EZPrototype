@@ -80,14 +80,14 @@ public class DrawerMenuHelper {
                         long i = drawerItem.getIdentifier();
                         if (i == 0){
                             activity.startActivity(new Intent(activity, ProfileActivity.class));
-                            activity.finish();
+                            //activity.finish();
                         }else if (i == 1){
 
                         }else if (i == 2){
 
                         }else if (i == 3){
                             activity.startActivity(new Intent(activity, PesananActivity.class));
-                            activity.finish();
+                            //activity.finish();
                         }else if (i == 4){
 
                         }else if (i == 5){

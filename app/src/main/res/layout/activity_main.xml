@@ -4,30 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/custom_main_background"
     android:orientation="vertical">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <include
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:id="@+id/activity_main_toolbar"
-            layout="@layout/app_bar"/>
-        <android.support.design.widget.TabLayout
-            android:id="@+id/activity_main_tabLayout"
+
+        <android.support.design.widget.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:minHeight="?actionBarSize"
-            app:tabGravity="fill"
-            app:tabIndicatorColor="@color/accent"
-            app:tabTextColor="@color/white"
-            app:tabSelectedTextColor="@color/white"
-            app:tabIndicatorHeight="4dp"
-            app:tabBackground="@color/colorPrimary"
-            app:tabMode="fixed">
-        </android.support.design.widget.TabLayout>
+            app:theme="@style/MyToolbarTheme"
+            android:background="@drawable/custom_toolbar">
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/activity_main_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@drawable/custom_toolbar"
+                android:gravity="center_vertical"
+                app:layout_collapseMode="pin"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:title="@string/app_name"/>
+            <android.support.design.widget.TabLayout
+                android:id="@+id/activity_main_tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="?actionBarSize"
+                app:tabGravity="fill"
+                app:tabIndicatorColor="@color/accent"
+                app:tabTextColor="@color/white"
+                app:tabSelectedTextColor="@color/white"
+                app:tabIndicatorHeight="4dp"
+                app:tabMode="fixed">
+            </android.support.design.widget.TabLayout>
+        </android.support.design.widget.AppBarLayout>
         <android.support.v4.view.ViewPager
             android:id="@+id/activity_main_viewPager"
             android:layout_width="match_parent"

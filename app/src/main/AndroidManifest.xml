@@ -23,7 +23,8 @@
         <activity android:name=".ui.OrderActivity" />
         <activity android:name=".ui.MitraActivity" />
         <activity android:name=".ui.PesananActivity" />
-        <activity android:name=".ui.ProfileActivity"></activity>
+        <activity android:name=".ui.ProfileActivity" />
+        <activity android:name=".ui.DetailPesananActivity" />
     </application>
 
 </manifest>

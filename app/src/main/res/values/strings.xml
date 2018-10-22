@@ -41,6 +41,15 @@
         <item>Letter</item>
     </string-array>
 
+    <string-array name="list_mitra">
+        <item>Printku</item>
+        <item>Mitra Jaya</item>
+        <item>Cetakku</item>
+        <item>Papyrus</item>
+        <item>Gekko</item>
+        <item>Kopma</item>
+    </string-array>
+
     <string name="menu_profile">Profile</string>
     <string name="menu_pesan">Messages</string>
     <string name="menu_history">History</string>

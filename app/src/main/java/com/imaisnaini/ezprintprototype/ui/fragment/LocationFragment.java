@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.imaisnaini.ezprintprototype.R;
-import com.imaisnaini.ezprintprototype.bl.Kategori;
+import com.imaisnaini.ezprintprototype.bl.Mitra;
 import com.imaisnaini.ezprintprototype.ui.adapter.MitraAdapter;
 
 import java.util.ArrayList;
@@ -24,7 +24,7 @@ import butterknife.ButterKnife;
  */
 public class LocationFragment extends Fragment {
     private MitraAdapter mAdapter;
-    private List<String> mList = new ArrayList<>();
+    private List<Mitra> mList = new ArrayList<>();
 
     @BindView(R.id.fragment_location_recyclerView)
     RecyclerView mRvContent;
@@ -54,9 +54,9 @@ public class LocationFragment extends Fragment {
     }
 
     public void initData(){
-        String[] kategori = getResources().getStringArray(R.array.list_kategori);
-        for (String s : kategori){
-            mList.add(s);
+        String[] mitra = getResources().getStringArray(R.array.list_mitra);
+        for (String s : mitra){
+            mList.add(new Mitra(s));
         }
     }
 

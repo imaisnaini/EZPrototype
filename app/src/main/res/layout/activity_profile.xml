@@ -85,7 +85,7 @@
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Log Out"
+                        android:text="Edit Profile"
                         android:textColor="@color/white"
                         android:background="@drawable/custom_bluebutton"/>
                 </RelativeLayout>
